@@ -26,3 +26,4 @@ if [ "$JBOSS_MODE" = "standalone" ]; then
 else
   $JBOSS_CLI -c "/host=*:shutdown"
 fi
+mv /opt/jboss/wildfly/standalone/configuration/standalone_xml_history/current /opt/jboss/wildfly/standalone/configuration/standalone_xml_history/$(date +"%Y%m%d-%s")
